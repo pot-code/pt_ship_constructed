@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdscript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="md.xsd" name="PtShipConstructed">
+  <cues>
+    <cue name="Main" instantiate="true">
+      <conditions>
+        <event_player_built_ship />
+      </conditions>
+      <actions>
+        <set_value name="$ship" exact="event.param" />
+        <show_notification
+          text="'ship %s has been constructed at %s'.[$ship.typename, $ship.environment.name]" />
+        <play_sound sound="sfx_ship_constructed" type="ui" />
+      </actions>
+    </cue>
+  </cues>
+</mdscript>
