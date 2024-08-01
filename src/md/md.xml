@@ -8,9 +8,10 @@
       </conditions>
       <actions>
         <set_value name="$ship" exact="event.param" />
+        <set_value name="$station_name" exact="$ship.dock.parent.parent.name" />
         <show_notification
-          text="'ship %s has been constructed at %s'.[$ship.typename, $ship.environment.name]" />
-        <play_sound sound="sfx_ship_constructed" type="ui" />
+          sound="'ui_sfx_ship_constructed'"
+          text="'%s (%s) has been constructed at %s'.[$ship.name, $ship.idcode, $station_name]" />
       </actions>
     </cue>
   </cues>
