@@ -2,7 +2,7 @@
   "$schema": "https://gist.githubusercontent.com/pot-code/1ce967bcfb81568b688997d4121812a8/raw/29e1358086df99495964078f6c2bf4d3560fc4cb/xmod.json",
   "id": "2024080114",
   "name": "PT: Ship Constructed",
-  "description": "you get notified when your ship is constructed",
+  "description": "get notified when your ship is constructed",
   "date": "2024-08-01",
   "version": 1,
   "author": "pot",
@@ -12,7 +12,7 @@
   "translations": [
     {
       "language": 44,
-      "description": "you get notified when your ship is constructed"
+      "description": "get notified when your ship is constructed"
     }
   ]
 }
