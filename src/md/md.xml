@@ -5,13 +5,21 @@
     <cue name="Main" instantiate="true">
       <conditions>
         <event_player_built_ship />
+        <check_any>
+          <check_value negate="1" value="event.param.type"
+            list="[
+              shiptype.smalldrone,
+              shiptype.xsdrone,
+              shiptype.distressdrone,
+            ]" />
+        </check_any>
       </conditions>
       <actions>
         <set_value name="$ship" exact="event.param" />
-        <set_value name="$station_name" exact="$ship.dock.parent.parent.name" />
+        <set_value name="$station_name" exact="$ship.station.name" />
         <show_notification
-          sound="'ui_sfx_ship_constructed'"
           text="'%s (%s) has been constructed at %s'.[$ship.name, $ship.idcode, $station_name]" />
+        <play_sound sound="'ui_sfx_ship_constructed'" type="ui" />
       </actions>
     </cue>
   </cues>
