@@ -5,14 +5,13 @@
     <cue name="Main" instantiate="true">
       <conditions>
         <event_player_built_ship />
-        <check_any>
-          <check_value negate="1" value="event.param.type"
-            list="[
+        <check_value negate="1" value="event.param.type"
+          list="[
               shiptype.smalldrone,
               shiptype.xsdrone,
               shiptype.distressdrone,
+              shiptype.courier,
             ]" />
-        </check_any>
       </conditions>
       <actions>
         <set_value name="$ship" exact="event.param" />
